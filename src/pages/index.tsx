@@ -1,6 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -266,25 +273,40 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex gap-6">
-                <Link href="#" className="hover:text-gray-300">
+                <Link
+                  href="http://www.facebook.com/languagetransfer"
+                  className="hover:text-gray-300"
+                >
                   <span className="sr-only">Facebook</span>
-                  {/* Add Facebook icon */}
+                  <FaFacebookF className="h-6 w-6" />
                 </Link>
-                <Link href="#" className="hover:text-gray-300">
+                <Link
+                  href="http://instagram.com/languagetransfer"
+                  className="hover:text-gray-300"
+                >
                   <span className="sr-only">Instagram</span>
-                  {/* Add Instagram icon */}
+                  <FaInstagram className="h-6 w-6" />
                 </Link>
-                <Link href="#" className="hover:text-gray-300">
-                  <span className="sr-only">Twitter</span>
-                  {/* Add Twitter icon */}
+                <Link
+                  href="https://x.com/langtransfer"
+                  className="hover:text-gray-300"
+                >
+                  <span className="sr-only">X (formerly Twitter)</span>
+                  <FaXTwitter className="h-6 w-6" />
                 </Link>
-                <Link href="#" className="hover:text-gray-300">
+                <Link
+                  href="https://www.youtube.com/user/languagetransfer"
+                  className="hover:text-gray-300"
+                >
                   <span className="sr-only">YouTube</span>
-                  {/* Add YouTube icon */}
+                  <FaYoutube className="h-6 w-6" />
                 </Link>
-                <Link href="#" className="hover:text-gray-300">
+                <Link
+                  href="https://www.linkedin.com/company/11045813/admin/dashboard/"
+                  className="hover:text-gray-300"
+                >
                   <span className="sr-only">LinkedIn</span>
-                  {/* Add LinkedIn icon */}
+                  <FaLinkedin className="h-6 w-6" />
                 </Link>
               </div>
             </div>

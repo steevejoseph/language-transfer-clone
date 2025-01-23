@@ -15,40 +15,45 @@ export default function About() {
       <main className="min-h-screen bg-white">
         {/* Navigation */}
         <nav className="fixed left-0 right-0 top-0 z-50 bg-white">
-          <div className="container mx-auto flex items-center justify-between px-4 py-3">
-            <div className="flex gap-8">
-              <Link href="/" className="text-gray-700 hover:text-black">
-                HOME
-              </Link>
-              <Link href="/courses" className="text-gray-700 hover:text-black">
-                FREE COURSES
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-black">
-                ABOUT
-              </Link>
+          <div className="mx-auto px-12">
+            <div className="flex items-center justify-between py-3">
+              <div className="flex gap-8">
+                <Link href="/" className="text-gray-700 hover:text-black">
+                  HOME
+                </Link>
+                <Link
+                  href="/courses"
+                  className="text-gray-700 hover:text-black"
+                >
+                  FREE COURSES
+                </Link>
+                <Link href="/about" className="text-gray-700 hover:text-black">
+                  ABOUT
+                </Link>
+                <Link
+                  href="/collaborate"
+                  className="text-gray-700 hover:text-black"
+                >
+                  COLLABORATE
+                </Link>
+              </div>
               <Link
-                href="/collaborate"
-                className="text-gray-700 hover:text-black"
+                href="/donate"
+                className="rounded-full border border-black px-6 py-1 text-sm hover:bg-gray-100"
               >
-                COLLABORATE
+                DONATE
               </Link>
             </div>
-            <Link
-              href="/donate"
-              className="rounded-full border border-black px-6 py-1 text-sm hover:bg-gray-100"
-            >
-              DONATE
-            </Link>
           </div>
         </nav>
 
         {/* About Content */}
-        <div className="container mx-auto max-w-4xl px-4 pt-32">
+        <div className="mx-auto px-12 pt-32">
           <h1 className="mb-16 text-center text-4xl font-bold tracking-wide">
             ABOUT LANGUAGE TRANSFER
           </h1>
 
-          <div className="space-y-6 text-center">
+          <div className="mx-auto space-y-6">
             <p>
               Language Transfer & The Thinking Method is the project of Mihalis
               Eleftheriou, creator of all current courses and developer of the
@@ -82,7 +87,7 @@ export default function About() {
               <div>
                 <iframe
                   className="aspect-video w-full"
-                  src="https://www.youtube.com/embed/BIZ_EMEIS_2014"
+                  src="https://www.youtube.com/embed/NwdqpyitYSM"
                   title="BIZ / EMEIS Interview 2014"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -97,7 +102,7 @@ export default function About() {
               <div>
                 <iframe
                   className="aspect-video w-full"
-                  src="https://www.youtube.com/embed/CYPRUS_PROJECT"
+                  src="https://www.youtube.com/embed/5_cYSImXyu4"
                   title="The Cyprus Project"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -112,7 +117,7 @@ export default function About() {
               <div>
                 <iframe
                   className="aspect-video w-full"
-                  src="https://www.youtube.com/embed/INTERVIEW_MIHALIS"
+                  src="https://www.youtube.com/embed/mZXXXQXeCa8"
                   title="Interview with Mihalis Eleftheriou"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -131,7 +136,7 @@ export default function About() {
                 height="166"
                 scrolling="no"
                 frameBorder="no"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/ACTUAL_FLUENCY&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/languagetransfer/excerpt-actual-fluency-interview&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
               />
             </div>
 
@@ -165,7 +170,7 @@ export default function About() {
 
         {/* Footer */}
         <footer className="mt-16 bg-black py-8 text-white">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto px-12">
             <div className="flex flex-col items-center justify-center gap-8">
               <div className="flex gap-8">
                 <Link href="/non-shop" className="hover:text-gray-300">

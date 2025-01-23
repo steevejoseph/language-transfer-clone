@@ -135,7 +135,7 @@ export default function Home() {
                   WebkitOverflowScrolling: "touch",
                 }}
               >
-                {courses.map((course) => (
+                {/* {courses.map((course) => (
                   <Link
                     key={course.name}
                     href={`/course/${course.slug}`}
@@ -164,7 +164,7 @@ export default function Home() {
                       </div>
                     </div>
                   </Link>
-                ))}
+                ))} */}
               </div>
 
               {/* Right Arrow */}

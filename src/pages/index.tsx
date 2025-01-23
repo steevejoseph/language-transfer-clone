@@ -108,40 +108,77 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Course Grid */}
+        {/* Course Carousel */}
         <section className="px-4 py-8">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {courses.map((course) => (
-                <Link
-                  key={course.name}
-                  href={`/course/${course.slug}`}
-                  className="group"
-                >
-                  <div className="overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-md">
-                    <div className="relative aspect-[4/3] bg-gray-100">
-                      <img
-                        src={course.image}
-                        alt={course.name}
-                        className="h-full w-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
-                        <div className="flex h-full items-center justify-center">
-                          <span className="rounded-full bg-white px-6 py-2 text-sm font-medium">
-                            Start Course
-                          </span>
+            <div className="relative">
+              {/* Left Arrow */}
+              <button
+                className="absolute left-0 top-1/2 z-10 -translate-y-1/2 bg-white/80 p-2 shadow-md"
+                onClick={() => {
+                  const container = document.getElementById("course-carousel");
+                  if (container) {
+                    container.scrollBy({ left: -300, behavior: "smooth" });
+                  }
+                }}
+              >
+                ←
+              </button>
+
+              {/* Course Carousel Container */}
+              <div
+                id="course-carousel"
+                className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth"
+                style={{
+                  scrollbarWidth: "none", // Firefox
+                  msOverflowStyle: "none", // IE/Edge
+                  WebkitOverflowScrolling: "touch",
+                }}
+              >
+                {courses.map((course) => (
+                  <Link
+                    key={course.name}
+                    href={`/course/${course.slug}`}
+                    className="group min-w-[300px] flex-none snap-center"
+                  >
+                    <div className="overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-md">
+                      <div className="relative aspect-[4/3] bg-gray-100">
+                        <img
+                          src={course.image}
+                          alt={course.name}
+                          className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
+                          <div className="flex h-full items-center justify-center">
+                            <span className="rounded-full bg-white px-6 py-2 text-sm font-medium">
+                              Start Course
+                            </span>
+                          </div>
                         </div>
                       </div>
+                      <div className="p-4">
+                        <h3 className="text-lg font-semibold">{course.name}</h3>
+                        <p className="mt-1 text-sm text-gray-600">
+                          {course.lessons} lessons
+                        </p>
+                      </div>
                     </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold">{course.name}</h3>
-                      <p className="mt-1 text-sm text-gray-600">
-                        {course.lessons} lessons
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Right Arrow */}
+              <button
+                className="absolute right-0 top-1/2 z-10 -translate-y-1/2 bg-white/80 p-2 shadow-md"
+                onClick={() => {
+                  const container = document.getElementById("course-carousel");
+                  if (container) {
+                    container.scrollBy({ left: 300, behavior: "smooth" });
+                  }
+                }}
+              >
+                →
+              </button>
             </div>
           </div>
         </section>
